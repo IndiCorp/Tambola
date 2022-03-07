@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="@dimen/margin_start"
+        android:layout_marginEnd="@dimen/margin_end"
+        app:cardCornerRadius="10dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#E8FFFD"
+            >
+
+            <View
+                android:id="@+id/selectedViewLine"
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:background="@color/light_grey"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/player_image_icon"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:src="@drawable/test_image"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.091"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/player_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:paddingEnd="5dp"
+                android:text="@string/class_teacher_name_example"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/player_image_icon"
+                app:layout_constraintTop_toTopOf="@+id/player_image_icon"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/ticket_quantity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingStart="22dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="5dp"
+                android:text="@string/_01"
+                android:textAllCaps="true"
+                android:textColor="@color/light_grey"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/player_name"
+                app:layout_constraintStart_toEndOf="@+id/player_image_icon"
+                app:layout_constraintTop_toBottomOf="@id/player_name" />
+
+
+            <TextView
+                android:id="@+id/ticket_total_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingStart="22dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="5dp"
+                android:text="@string/class_teacher_name_example"
+                android:textAllCaps="true"
+                android:textColor="@color/light_grey"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/player_name"
+                app:layout_constraintStart_toEndOf="@+id/player_image_icon"
+                app:layout_constraintTop_toBottomOf="@id/ticket_quantity" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/block_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/circular_corner_red_button_background"
+                android:text="@string/block"
+                android:textColor="@color/white"
+                android:elevation="5dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.944"
+                app:layout_constraintStart_toEndOf="@+id/selectedViewLine"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

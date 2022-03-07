@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".HostScreen">
+
+
+      <TextView
+          android:id="@+id/host_textView"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/host"
+          android:textAllCaps="true"
+          android:textColor="@color/black"
+          android:textSize="35sp"
+          android:textStyle="bold"
+          android:layout_marginTop="16dp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+
+      <TextView
+          android:id="@+id/ticket_price_textView"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/ticket_price_textView"
+          android:textColor="@color/black"
+          android:textSize="25sp"
+          android:textStyle="bold"
+          android:layout_marginTop="8dp"
+          android:layout_marginStart="8dp"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/host_textView" />
+
+      <ImageView
+          android:id="@+id/ticket_price_increment_button"
+          android:layout_width="35dp"
+          android:layout_height="35dp"
+          android:layout_marginEnd="8dp"
+          android:src="@drawable/ic_right_arrow_52"
+          app:layout_constraintBottom_toBottomOf="@+id/ticket_price_edittext"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toTopOf="@+id/ticket_price_edittext" />
+
+
+      <EditText
+          android:id="@+id/ticket_price_edittext"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_toStartOf="@id/ticket_price_increment_button"
+          android:clickable="false"
+          android:focusable="false"
+          android:gravity="center"
+          android:includeFontPadding="false"
+          android:inputType="number"
+          android:text="@string/_00"
+          android:layout_marginEnd="8dp"
+          android:textSize="20sp"
+          app:layout_constraintEnd_toStartOf="@+id/ticket_price_increment_button"
+          app:layout_constraintTop_toTopOf="@+id/ticket_price_textView" />
+
+
+      <ImageView
+          android:id="@+id/ticket_price_decrement_button"
+          android:layout_width="35dp"
+          android:layout_height="35dp"
+          android:src="@drawable/ic_left_arrow_52"
+          android:layout_marginEnd="8dp"
+          app:layout_constraintEnd_toStartOf="@+id/ticket_price_edittext"
+          app:layout_constraintTop_toTopOf="@+id/ticket_price_increment_button" />
+
+
+
+      <TextView
+          android:id="@+id/price_distribution_textView"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/price_distribution"
+          android:textColor="@color/black"
+          android:layout_marginTop="8dp"
+          android:textSize="25sp"
+          android:textStyle="bold"
+          app:layout_constraintStart_toStartOf="@+id/ticket_price_textView"
+          app:layout_constraintTop_toBottomOf="@+id/ticket_price_edittext" />
+
+
+      <TextView
+          android:id="@+id/first_line_textView"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="8dp"
+          android:text="@string/first_line"
+          android:textColor="@color/black"
+          android:textSize="18sp"
+          android:textStyle="bold"
+          app:layout_constraintBottom_toBottomOf="@+id/first_line_price_edittext"
+          app:layout_constraintStart_toStartOf="@+id/ticket_price_textView"
+          app:layout_constraintTop_toTopOf="@+id/first_line_price_edittext" />
+
+
+      <EditText
+          android:id="@+id/first_line_price_edittext"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentEnd="true"
+          android:gravity="center"
+          android:layout_marginTop="8dp"
+          android:inputType="number"
+          android:text="@string/_00"
+          android:textSize="18sp"
+          app:layout_constraintEnd_toEndOf="@+id/ticket_price_edittext"
+          app:layout_constraintTop_toBottomOf="@+id/price_distribution_textView" />
+
+
+      <ImageView
+          android:id="@+id/imageView"
+          android:layout_width="25dp"
+          android:layout_height="25dp"
+          android:layout_below="@id/price_distribution_textView"
+          android:layout_toStartOf="@id/first_line_price_edittext"
+          android:src="@drawable/ic_baseline_percent_24"
+          android:layout_marginStart="8dp"
+          app:layout_constraintBottom_toBottomOf="@+id/first_line_price_edittext"
+          app:layout_constraintStart_toEndOf="@+id/first_line_price_edittext"
+          app:layout_constraintTop_toTopOf="@+id/first_line_price_edittext" />
+
+
+      <TextView
+          android:id="@+id/middle_line_textView"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/first_line_textView"
+          android:text="@string/middle_line"
+          android:textColor="@color/black"
+          android:textSize="18sp"
+          android:textStyle="bold"
+          app:layout_constraintBottom_toBottomOf="@+id/middle_line_price_edittext"
+          app:layout_constraintStart_toStartOf="@+id/first_line_textView"
+          app:layout_constraintTop_toTopOf="@+id/middle_line_price_edittext" />
+
+      <EditText
+          android:id="@+id/middle_line_price_edittext"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="8dp"
+          android:layout_alignParentEnd="true"
+          android:gravity="center"
+          android:inputType="number"
+          android:text="@string/_00"
+          android:textSize="18sp"
+          app:layout_constraintEnd_toEndOf="@+id/first_line_price_edittext"
+          app:layout_constraintTop_toBottomOf="@+id/first_line_price_edittext" />
+
+
+      <ImageView
+          android:id="@+id/imageView2"
+          android:layout_width="25dp"
+          android:layout_height="25dp"
+          android:layout_toStartOf="@id/middle_line_price_edittext"
+          android:src="@drawable/ic_baseline_percent_24"
+          android:layout_marginStart="8dp"
+          app:layout_constraintBottom_toBottomOf="@+id/middle_line_price_edittext"
+          app:layout_constraintStart_toEndOf="@+id/middle_line_price_edittext"
+          app:layout_constraintTop_toTopOf="@+id/middle_line_price_edittext" />
+
+
+      <TextView
+          android:id="@+id/last_line_textView"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/last_line"
+          android:textColor="@color/black"
+          android:textSize="18sp"
+          android:textStyle="bold"
+          app:layout_constraintBottom_toBottomOf="@+id/last_line_price_edittext"
+          app:layout_constraintStart_toStartOf="@+id/middle_line_textView"
+          app:layout_constraintTop_toTopOf="@+id/last_line_price_edittext" />
+
+      <EditText
+          android:id="@+id/last_line_price_edittext"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentEnd="true"
+          android:gravity="center"
+          android:inputType="number"
+          android:layout_marginTop="8dp"
+          android:text="@string/_00"
+          android:textSize="18sp"
+          app:layout_constraintEnd_toEndOf="@+id/middle_line_price_edittext"
+          app:layout_constraintTop_toBottomOf="@+id/middle_line_price_edittext" />
+
+
+      <ImageView
+          android:id="@+id/imageView3"
+          android:layout_width="25dp"
+          android:layout_height="25dp"
+          android:layout_toStartOf="@id/last_line_price_edittext"
+          android:src="@drawable/ic_baseline_percent_24"
+          android:layout_marginStart="8dp"
+          app:layout_constraintBottom_toBottomOf="@+id/last_line_price_edittext"
+          app:layout_constraintStart_toEndOf="@+id/last_line_price_edittext"
+          app:layout_constraintTop_toBottomOf="@+id/middle_line_price_edittext" />
+
+      <TextView
+          android:id="@+id/high_low_textView"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/high_low"
+          android:textColor="@color/black"
+          android:textSize="18sp"
+          android:textStyle="bold"
+          app:layout_constraintBottom_toBottomOf="@+id/first_last_price_edittext"
+          app:layout_constraintStart_toStartOf="@+id/last_line_textView"
+          app:layout_constraintTop_toBottomOf="@+id/last_line_price_edittext" />
+
+      <EditText
+          android:id="@+id/first_last_price_edittext"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/last_line_price_edittext"
+          android:layout_alignParentEnd="true"
+          android:gravity="center"
+          android:inputType="number"
+          android:layout_marginTop="8dp"
+          android:text="@string/_00"
+          android:textSize="18sp"
+          app:layout_constraintEnd_toEndOf="@+id/last_line_price_edittext"
+          app:layout_constraintTop_toBottomOf="@+id/last_line_price_edittext" />
+
+
+      <ImageView
+          android:id="@+id/imageView4"
+          android:layout_width="25dp"
+          android:layout_height="25dp"
+          android:layout_marginStart="8dp"
+          android:layout_toStartOf="@id/first_last_price_edittext"
+          android:src="@drawable/ic_baseline_percent_24"
+          app:layout_constraintBottom_toBottomOf="@+id/first_last_price_edittext"
+          app:layout_constraintStart_toEndOf="@+id/first_last_price_edittext"
+          app:layout_constraintTop_toBottomOf="@+id/last_line_price_edittext" />
+
+
+      <TextView
+          android:id="@+id/full_house_textView"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/high_low_textView"
+          android:text="@string/full_house"
+          android:textColor="@color/black"
+          android:textSize="18sp"
+          android:textStyle="bold"
+          app:layout_constraintBottom_toBottomOf="@+id/full_house_line_price_edittext"
+          app:layout_constraintStart_toStartOf="@+id/high_low_textView"
+          app:layout_constraintTop_toTopOf="@+id/full_house_line_price_edittext" />
+
+      <EditText
+          android:id="@+id/full_house_line_price_edittext"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentEnd="true"
+          android:gravity="center"
+          android:inputType="number"
+          android:text="@string/_00"
+          android:layout_marginTop="8dp"
+          android:textSize="18sp"
+          app:layout_constraintEnd_toEndOf="@+id/first_last_price_edittext"
+          app:layout_constraintTop_toBottomOf="@+id/first_last_price_edittext" />
+
+
+      <ImageView
+          android:id="@+id/imageView5"
+          android:layout_width="25dp"
+          android:layout_height="25dp"
+          android:layout_marginStart="8dp"
+          android:layout_toStartOf="@id/full_house_line_price_edittext"
+          android:src="@drawable/ic_baseline_percent_24"
+          app:layout_constraintBottom_toBottomOf="@+id/full_house_line_price_edittext"
+          app:layout_constraintStart_toEndOf="@+id/full_house_line_price_edittext"
+          app:layout_constraintTop_toTopOf="@+id/full_house_line_price_edittext" />
+
+      <androidx.appcompat.widget.AppCompatButton
+          android:id="@+id/generate_room_code_button"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:background="@drawable/circular_corner_button_background"
+          android:text="@string/generate_code"
+          android:textSize="25sp"
+          android:paddingStart="5dp"
+          android:paddingEnd="5dp"
+          android:textStyle="bold"
+          app:layout_constraintStart_toStartOf="@+id/full_house_textView"
+          app:layout_constraintTop_toBottomOf="@+id/full_house_line_price_edittext" />
+
+
+      <androidx.appcompat.widget.AppCompatButton
+          android:id="@+id/save_button"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="@drawable/circular_corner_button_background"
+          android:paddingStart="5dp"
+          android:paddingEnd="5dp"
+          android:layout_marginTop="16dp"
+          android:text="@string/save"
+          android:textSize="25sp"
+          android:visibility="invisible"
+          android:textStyle="bold"
+          app:layout_constraintStart_toStartOf="@+id/full_house_textView"
+          app:layout_constraintTop_toBottomOf="@+id/generate_room_code_button" />
+
+
+      <TextView
+          android:id="@+id/room_code_textView"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/ticket_price_textView"
+          android:textColor="@color/black"
+          android:textSize="25sp"
+          android:textStyle="bold"
+          android:visibility="invisible"
+          android:layout_marginTop="24dp"
+          android:layout_marginStart="8dp"
+          app:layout_constraintStart_toStartOf="@+id/full_house_textView"
+          app:layout_constraintTop_toBottomOf="@+id/full_house_line_price_edittext"/>
+
+
+      <androidx.appcompat.widget.AppCompatButton
+          android:id="@+id/share_code_button"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/share_code"
+          android:visibility="invisible"
+          app:layout_constraintBottom_toBottomOf="@+id/room_code_textView"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.435"
+          app:layout_constraintStart_toEndOf="@+id/room_code_textView"
+          app:layout_constraintTop_toTopOf="@+id/room_code_textView" />
+
+      <ProgressBar
+          android:id="@+id/progress_bar"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          android:visibility="invisible"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+
+
+      <TextView
+          android:id="@+id/sold_tickets_textView"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/sold_tickets"
+          android:textColor="@color/black"
+          android:textSize="25sp"
+          android:textStyle="bold"
+          android:visibility="invisible"
+          android:layout_marginTop="16dp"
+          app:layout_constraintStart_toStartOf="@+id/save_button"
+          app:layout_constraintTop_toBottomOf="@+id/save_button"/>
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/sold_tickets_recycleView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:layout_constraintTop_toBottomOf="@+id/sold_tickets_textView"
+          android:layout_marginTop="16dp"
+        />
+
+
+      <androidx.appcompat.widget.AppCompatButton
+          android:id="@+id/start_room_button"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:background="@drawable/circular_corner_button_background"
+          android:paddingStart="5dp"
+          android:paddingEnd="5dp"
+          android:text="@string/start"
+          android:textSize="25sp"
+          android:layout_marginBottom="16dp"
+          android:textStyle="bold"
+          android:visibility="gone"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/sold_tickets_recycleView" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>
