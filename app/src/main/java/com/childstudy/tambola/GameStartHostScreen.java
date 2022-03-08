@@ -338,7 +338,6 @@ public class GameStartHostScreen extends AppCompatActivity {
                             adapterForBoardRecycleView.notifyItemChanged (list.get ( list.size ()-1)-1);
 
                             adapterForDoneNumbersRecycleView.notifyDataSetChanged ();
-
                             if(list.size ()==90)
                             {
                                 binding.gameOverAnimationView.setVisibility ( View.VISIBLE );
@@ -367,9 +366,6 @@ public class GameStartHostScreen extends AppCompatActivity {
 
                                 setNumberAnimation ( myNumber1 );
                             }
-
-
-
                         }else
                         {
                             Toast.makeText ( GameStartHostScreen.this , "problem Occurred" , Toast.LENGTH_SHORT ).show ( );
