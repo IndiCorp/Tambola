@@ -42,6 +42,72 @@
           app:layout_constraintStart_toStartOf="parent"
           app:layout_constraintTop_toBottomOf="@+id/host_textView" />
 
+      <TextView
+          android:id="@+id/num_of_tickets_textView"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="8dp"
+          android:text="@string/num_of_tickets"
+          android:textColor="@color/black"
+          android:textSize="25sp"
+          android:textStyle="bold"
+          android:layout_marginTop="8dp"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/ticket_price_edittext" />
+
+      <EditText
+          android:id="@+id/num_of_tickets"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="8dp"
+          android:layout_toStartOf="@id/ticket_price_increment_button"
+          android:clickable="false"
+          android:focusable="false"
+          android:gravity="center"
+          android:includeFontPadding="false"
+          android:inputType="number"
+          android:text="@string/_00"
+          android:textSize="20sp"
+          app:layout_constraintEnd_toStartOf="@+id/ticket_price_increment_button"
+          app:layout_constraintTop_toTopOf="@+id/num_of_tickets_textView" />
+
+
+      <TextView
+          android:id="@+id/total_price_textView"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="8dp"
+          android:text="@string/total_price_money"
+          android:textColor="@color/black"
+          android:textSize="25sp"
+          android:layout_marginTop="8dp"
+          android:textStyle="bold"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/num_of_tickets" />
+
+      <EditText
+          android:id="@+id/total_price"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="8dp"
+          android:layout_toStartOf="@id/ticket_price_increment_button"
+          android:clickable="false"
+          android:focusable="false"
+          android:gravity="center"
+          android:includeFontPadding="false"
+          android:inputType="number"
+          android:text="@string/_50"
+          android:textSize="20sp"
+          app:layout_constraintEnd_toStartOf="@+id/ticket_price_increment_button"
+          app:layout_constraintTop_toTopOf="@id/total_price_textView" />
+
+
+
+
+
+
+
+
       <ImageView
           android:id="@+id/ticket_price_increment_button"
           android:layout_width="35dp"
@@ -80,18 +146,18 @@
           app:layout_constraintTop_toTopOf="@+id/ticket_price_increment_button" />
 
 
-
       <TextView
           android:id="@+id/price_distribution_textView"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:text="@string/price_distribution"
           android:textColor="@color/black"
-          android:layout_marginTop="8dp"
           android:textSize="25sp"
           android:textStyle="bold"
+          android:layout_marginTop="10dp"
           app:layout_constraintStart_toStartOf="@+id/ticket_price_textView"
-          app:layout_constraintTop_toBottomOf="@+id/ticket_price_edittext" />
+          app:layout_constraintTop_toBottomOf="@+id/total_price" />
+
 
 
       <TextView
@@ -117,8 +183,24 @@
           android:layout_marginTop="8dp"
           android:inputType="number"
           android:text="@string/_00"
+          android:maxLength="5"
           android:textSize="18sp"
           app:layout_constraintEnd_toEndOf="@+id/ticket_price_edittext"
+          app:layout_constraintTop_toBottomOf="@+id/price_distribution_textView" />
+
+
+      <EditText
+          android:id="@+id/first_line_price_value_edittext"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentEnd="true"
+          android:layout_marginTop="8dp"
+          android:gravity="center"
+          android:inputType="number"
+          android:text="@string/_00"
+          android:textSize="18sp"
+          android:layout_marginEnd="10dp"
+          app:layout_constraintEnd_toStartOf="@+id/first_line_price_edittext"
           app:layout_constraintTop_toBottomOf="@+id/price_distribution_textView" />
 
 
@@ -162,6 +244,22 @@
           app:layout_constraintTop_toBottomOf="@+id/first_line_price_edittext" />
 
 
+      <EditText
+          android:id="@+id/middle_line_price_value_edittext"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentEnd="true"
+          android:layout_marginTop="8dp"
+          android:gravity="center"
+          android:inputType="number"
+          android:layout_marginEnd="10dp"
+          android:text="@string/_00"
+          android:textSize="18sp"
+          app:layout_constraintEnd_toStartOf="@+id/middle_line_price_edittext"
+          app:layout_constraintTop_toBottomOf="@+id/first_line_price_edittext" />
+
+
+
       <ImageView
           android:id="@+id/imageView2"
           android:layout_width="25dp"
@@ -197,6 +295,21 @@
           android:text="@string/_00"
           android:textSize="18sp"
           app:layout_constraintEnd_toEndOf="@+id/middle_line_price_edittext"
+          app:layout_constraintTop_toBottomOf="@+id/middle_line_price_edittext" />
+
+
+      <EditText
+          android:id="@+id/last_line_price_value_edittext"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentEnd="true"
+          android:layout_marginTop="8dp"
+          android:gravity="center"
+          android:inputType="number"
+          android:layout_marginEnd="10dp"
+          android:text="@string/_00"
+          android:textSize="18sp"
+          app:layout_constraintEnd_toStartOf="@+id/last_line_price_edittext"
           app:layout_constraintTop_toBottomOf="@+id/middle_line_price_edittext" />
 
 
@@ -237,6 +350,21 @@
           app:layout_constraintEnd_toEndOf="@+id/last_line_price_edittext"
           app:layout_constraintTop_toBottomOf="@+id/last_line_price_edittext" />
 
+      <EditText
+          android:id="@+id/first_last_price_value_edittext"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/last_line_price_edittext"
+          android:layout_alignParentEnd="true"
+          android:layout_marginTop="8dp"
+          android:gravity="center"
+          android:inputType="number"
+          android:text="@string/_00"
+          android:textSize="18sp"
+          android:layout_marginEnd="10dp"
+          app:layout_constraintEnd_toStartOf="@+id/first_last_price_edittext"
+          app:layout_constraintTop_toBottomOf="@+id/last_line_price_edittext" />
+
 
       <ImageView
           android:id="@+id/imageView4"
@@ -274,6 +402,21 @@
           android:layout_marginTop="8dp"
           android:textSize="18sp"
           app:layout_constraintEnd_toEndOf="@+id/first_last_price_edittext"
+          app:layout_constraintTop_toBottomOf="@+id/first_last_price_edittext" />
+
+
+      <EditText
+          android:id="@+id/full_house_line_price_value_edittext"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentEnd="true"
+          android:layout_marginTop="8dp"
+          android:gravity="center"
+          android:inputType="number"
+          android:text="@string/_00"
+          android:layout_marginEnd="10dp"
+          android:textSize="18sp"
+          app:layout_constraintEnd_toStartOf="@+id/full_house_line_price_edittext"
           app:layout_constraintTop_toBottomOf="@+id/first_last_price_edittext" />
 
 

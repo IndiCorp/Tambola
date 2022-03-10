@@ -101,9 +101,9 @@ public class PlayRoom extends AppCompatActivity {
                         @Override
                         public void onDataChange ( @NonNull DataSnapshot snapshot ) {
 
-                            Boolean roomStatus=snapshot.getValue ( Boolean.class );
+                            String roomStatus=snapshot.getValue ( String.class );
                             if ( roomStatus!=null )
-                            if(roomStatus)
+                            if(roomStatus.equalsIgnoreCase ( "started" ))
                             {
                                 Intent intent=new Intent (PlayRoom.this,GameStartPlayerScreen.class  );
                                 intent.putExtra ( "ROOM_ID",roomId );

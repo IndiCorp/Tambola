@@ -45,4 +45,6 @@
     <string name="winner_board">Winner Board</string>
     <string name="block">block</string>
     <string name="joined_players">Joined Players</string>
+    <string name="num_of_tickets">Number of Tickets</string>
+    <string name="_50">50</string>
 </resources>

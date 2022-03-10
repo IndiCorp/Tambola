@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Toast;
 import com.childstudy.tambola.adapters.AdapterPlayersList;
@@ -27,11 +29,290 @@ public class HostScreen extends AppCompatActivity {
 
     ActivityHostScreenBinding binding;
     private String roomCode;
+    int totalPrice;
+    int numOfTickets;
+
+
     @Override
     protected void onCreate ( Bundle savedInstanceState ) {
         super.onCreate ( savedInstanceState );
         binding=ActivityHostScreenBinding.inflate ( getLayoutInflater () );
         setContentView ( binding.getRoot () );
+
+        binding.firstLinePriceValueEdittext.addTextChangedListener(new TextWatcher () {
+
+            @Override
+            public void afterTextChanged( Editable s) {}
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start,
+                                          int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start,
+                                      int before, int count) {
+                if(s.length() != 0)
+                {
+                    if(binding.firstLinePriceValueEdittext.hasFocus ())
+                    {
+                        int priceMoney=Integer.parseInt (binding.totalPrice.getText ().toString ()  );
+                        float currentValue=Float.parseFloat ( binding.firstLinePriceValueEdittext.getText ().toString () );
+                        float percentage=(currentValue/priceMoney)*100;
+                        String strValue=percentage+"";
+                        binding.firstLinePriceEdittext.setText (  strValue);
+                    }
+                }
+            }
+        });
+
+        binding.middleLinePriceValueEdittext.addTextChangedListener(new TextWatcher () {
+
+            @Override
+            public void afterTextChanged( Editable s) {}
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start,
+                                          int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start,
+                                      int before, int count) {
+                if(s.length() != 0)
+                {
+                    if(binding.middleLinePriceValueEdittext.hasFocus ())
+                    {
+                        int priceMoney=Integer.parseInt (binding.totalPrice.getText ().toString ()  );
+                        float currentValue=Float.parseFloat ( binding.middleLinePriceValueEdittext.getText ().toString () );
+                        float percentage=(currentValue/priceMoney)*100;
+                        String strValue=percentage+"";
+                        binding.middleLinePriceEdittext.setText (  strValue);
+                    }
+
+                }
+            }
+        });
+
+        binding.lastLinePriceValueEdittext.addTextChangedListener(new TextWatcher () {
+
+            @Override
+            public void afterTextChanged( Editable s) {}
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start,
+                                          int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start,
+                                      int before, int count) {
+                if(s.length() != 0)
+                {
+                    if(binding.lastLinePriceValueEdittext.hasFocus ())
+                    {
+                        int priceMoney=Integer.parseInt (binding.totalPrice.getText ().toString ()  );
+                        float currentValue=Float.parseFloat ( binding.lastLinePriceValueEdittext.getText ().toString () );
+                        float percentage=(currentValue/priceMoney)*100;
+                        String strValue=percentage+"";
+                        binding.lastLinePriceEdittext.setText (  strValue);
+                    }
+                }
+            }
+        });
+
+        binding.firstLastPriceValueEdittext.addTextChangedListener(new TextWatcher () {
+
+            @Override
+            public void afterTextChanged( Editable s) {}
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start,
+                                          int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start,
+                                      int before, int count) {
+                if(s.length() != 0)
+                {
+                    if(binding.firstLastPriceValueEdittext.hasFocus ())
+                    {
+                        int priceMoney=Integer.parseInt (binding.totalPrice.getText ().toString ()  );
+                        float currentValue=Float.parseFloat ( binding.firstLastPriceValueEdittext.getText ().toString () );
+                        float percentage=(currentValue/priceMoney)*100;
+                        String strValue=percentage+"";
+                        binding.firstLastPriceEdittext.setText (  strValue);
+                    }
+                }
+            }
+        });
+
+        binding.fullHouseLinePriceValueEdittext.addTextChangedListener(new TextWatcher () {
+
+            @Override
+            public void afterTextChanged( Editable s) {}
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start,
+                                          int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start,
+                                      int before, int count) {
+                if(s.length() != 0)
+                {
+                    if(binding.fullHouseLinePriceValueEdittext.hasFocus ())
+                    {
+                        int priceMoney=Integer.parseInt (binding.totalPrice.getText ().toString ()  );
+                        float currentValue=Float.parseFloat ( binding.fullHouseLinePriceValueEdittext.getText ().toString () );
+                        float percentage=(currentValue/priceMoney)*100;
+                        String strValue=percentage+"";
+                        binding.fullHouseLinePriceEdittext.setText (  strValue);
+                    }
+                }
+            }
+        });
+
+
+
+
+        binding.firstLinePriceEdittext.addTextChangedListener(new TextWatcher () {
+
+            @Override
+            public void afterTextChanged( Editable s) {}
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start,
+                                          int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start,
+                                      int before, int count) {
+                if(s.length() != 0)
+                {
+                    if(binding.firstLinePriceEdittext.hasFocus ())
+                    {
+                        int priceMoney=Integer.parseInt (binding.totalPrice.getText ().toString ()  );
+                        float percentage=Float.parseFloat ( binding.firstLinePriceEdittext.getText ().toString () );
+                        int value= (int) ((percentage/100)*priceMoney);
+                        String strValue=value+"";
+                        binding.firstLinePriceValueEdittext.setText (  strValue);
+                    }
+                }
+            }
+        });
+
+        binding.middleLinePriceEdittext.addTextChangedListener(new TextWatcher () {
+
+            @Override
+            public void afterTextChanged( Editable s) {}
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start,
+                                          int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start,
+                                      int before, int count) {
+                if(s.length() != 0)
+                {
+                    if( binding.middleLinePriceEdittext.hasFocus ())
+                    {
+                        int priceMoney=Integer.parseInt (binding.totalPrice.getText ().toString ()  );
+                        float percentage=Float.parseFloat ( binding.middleLinePriceEdittext.getText ().toString () );
+                        int value= (int) ((percentage/100)*priceMoney);
+                        String strValue=value+"";
+                        binding.middleLinePriceValueEdittext.setText (  strValue);
+                    }
+
+                }
+            }
+        });
+
+        binding.lastLinePriceEdittext.addTextChangedListener(new TextWatcher () {
+            @Override
+            public void afterTextChanged( Editable s) {}
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start,
+                                          int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start,
+                                      int before, int count) {
+                if(s.length() != 0)
+                {
+                    if(binding.lastLinePriceEdittext.hasFocus ())
+                    {
+                        int priceMoney=Integer.parseInt (binding.totalPrice.getText ().toString ()  );
+                        float percentage=Float.parseFloat ( binding.lastLinePriceEdittext.getText ().toString () );
+                        int value= (int) ((percentage/100)*priceMoney);
+                        String strValue=value+"";
+                        binding.lastLinePriceValueEdittext.setText (  strValue);
+                    }
+                }
+            }
+        });
+
+        binding.firstLastPriceEdittext.addTextChangedListener(new TextWatcher () {
+
+            @Override
+            public void afterTextChanged( Editable s) {}
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start,
+                                          int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start,
+                                      int before, int count) {
+                if(s.length() != 0)
+                {
+                    if(binding.firstLastPriceEdittext.hasFocus ())
+                    {
+                        int priceMoney=Integer.parseInt (binding.totalPrice.getText ().toString ()  );
+                        float percentage=Float.parseFloat ( binding.firstLastPriceEdittext.getText ().toString () );
+                        int value= (int) ((percentage/100)*priceMoney);
+                        String strValue=value+"";
+                        binding.firstLastPriceValueEdittext.setText (  strValue);
+                    }
+                }
+            }
+        });
+
+        binding.fullHouseLinePriceEdittext.addTextChangedListener(new TextWatcher () {
+            @Override
+            public void afterTextChanged( Editable s) {}
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start,
+                                          int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start,
+                                      int before, int count) {
+                if(s.length() != 0)
+                {
+                    if(binding.fullHouseLinePriceEdittext.hasFocus ())
+                    {
+                        int priceMoney=Integer.parseInt (binding.totalPrice.getText ().toString ()  );
+                        float currentValue=Float.parseFloat ( binding.fullHouseLinePriceEdittext.getText ().toString () );
+                        float percentage=(currentValue/priceMoney)*100;
+                        String strValue=percentage+"";
+                        binding.fullHouseLinePriceValueEdittext.setText (  strValue);
+                    }
+                }
+            }
+        });
+
+
 
 
         binding.generateRoomCodeButton.setOnClickListener ( view -> {
@@ -77,6 +358,12 @@ public class HostScreen extends AppCompatActivity {
                             {
                                 playerModelList.add ( playerModel );
                                 adapter.notifyDataSetChanged ();
+
+
+                                numOfTickets=numOfTickets+Integer.parseInt ( playerModel.getTicketQuantity () );
+                                totalPrice=numOfTickets * Integer.parseInt (binding.ticketPriceEdittext.getText ().toString () );
+                                binding.totalPrice.setText ( totalPrice+"" );
+                                binding.numOfTickets.setText ( numOfTickets+"" );
                             }
                         }
 
@@ -113,11 +400,16 @@ public class HostScreen extends AppCompatActivity {
         binding.ticketPriceIncrementButton.setOnClickListener ( view -> {
             String newValue=Integer.parseInt (binding.ticketPriceEdittext.getText ().toString () )+10+"";
             binding.ticketPriceEdittext.setText (newValue );
+            totalPrice=Integer.parseInt (newValue) * Integer.parseInt (binding.numOfTickets.getText ().toString () );
+            binding.totalPrice.setText ( totalPrice+"" );
+
         } );
 
         binding.ticketPriceDecrementButton.setOnClickListener ( view -> {
             String newValue=Integer.parseInt (binding.ticketPriceEdittext.getText ().toString () )-10+"";
             binding.ticketPriceEdittext.setText (newValue );
+            totalPrice=Integer.parseInt (newValue) * Integer.parseInt (binding.numOfTickets.getText ().toString () );
+            binding.totalPrice.setText ( totalPrice+"" );
         } );
 
         binding.shareCodeButton.setOnClickListener ( view -> {
@@ -153,51 +445,76 @@ public class HostScreen extends AppCompatActivity {
             } );
         } );
 
-        binding.startRoomButton.setOnClickListener ( view -> Database.getDatabaseReference ().child ( "Room" ).child(roomCode).child ( "current_number" )
-                .setValue ( 1000 ).addOnCompleteListener ( task -> {
-                    if ( task.isSuccessful () )
-                    {
-                        Database.getDatabaseReference ().child ( "Room" ).child(roomCode).child ( "status" ).setValue(true).addOnCompleteListener ( task1 -> {
-                            if ( task1.isSuccessful () )
-                            {
-                                binding.progressBar.setVisibility ( View.VISIBLE );
-                                DatabaseReference myRef = FirebaseDatabase.getInstance().getReference ( );
-                                RoomModel roomModel=new RoomModel ( binding.ticketPriceEdittext.getText ().toString (),
-                                        binding.firstLinePriceEdittext.getText ().toString (),
-                                        binding.middleLinePriceEdittext.getText ().toString (),
-                                        binding.lastLinePriceEdittext.getText ().toString (),
-                                        binding.firstLastPriceEdittext.getText ().toString (),
-                                        binding.fullHouseLinePriceEdittext.getText ().toString (),roomCode );
+        binding.startRoomButton.setOnClickListener ( new View.OnClickListener ( ) {
+            @Override
+            public void onClick ( View view ) {
 
-                                myRef.child ( "Room" ).child(roomCode).child("prices").setValue(roomModel).addOnCompleteListener ( task2 -> {
-                                    if(task2.isSuccessful ())
-                                    {
-                                        Toast.makeText ( HostScreen.this , "Update Success" , Toast.LENGTH_SHORT ).show ( );
-                                        Intent intent=new Intent (HostScreen.this,GameStartHostScreen.class  );
-                                        intent.putExtra ( "ROOM_ID",roomCode );
-                                        startActivity ( intent);
-                                        HostScreen.this.finish ();
-                                    }
-                                    else
-                                    {
-                                        Toast.makeText ( HostScreen.this , "Some Problem Occur" , Toast.LENGTH_SHORT ).show ( );
-                                    }
-                                    binding.progressBar.setVisibility ( View.INVISIBLE );
-                                } );
+                int totalValue=0;
+                try {
+                    int firstLineValue= (int) Float.parseFloat ( binding.firstLinePriceEdittext.getText ().toString () );
+                    int secondLineValue= (int) Float.parseFloat ( binding.middleLinePriceEdittext.getText ().toString () );
+                    int thirdLineValue= (int) Float.parseFloat( binding.lastLinePriceEdittext.getText ().toString () );
+                    int highLowValue= (int) Float.parseFloat ( binding.firstLastPriceEdittext.getText ().toString () );
+                    int fullHouseValue= (int) Float.parseFloat ( binding.fullHouseLinePriceEdittext.getText ().toString () );
+                    totalValue=firstLineValue+secondLineValue+thirdLineValue+highLowValue+fullHouseValue;
+                }catch (Exception ignored)
+                {
 
-                            }else
-                            {
-                                Toast.makeText ( HostScreen.this , "some problem occur" , Toast.LENGTH_SHORT ).show ( );
-                            }
-                        } );
+                }
+
+                if(totalValue!=100)
+                {
+                    Toast.makeText ( HostScreen.this , "Please select correct percentage" , Toast.LENGTH_SHORT ).show ( );
+                }else
+                {
+                    Database.getDatabaseReference ().child ( "Room" ).child(roomCode).child ( "current_number" )
+                            .setValue ( 1000 ).addOnCompleteListener ( task -> {
+                        if ( task.isSuccessful () )
+                        {
+                            Database.getDatabaseReference ().child ( "Room" ).child(roomCode).child ( "status" ).setValue("started").addOnCompleteListener ( task1 -> {
+                                if ( task1.isSuccessful () )
+                                {
+                                    binding.progressBar.setVisibility ( View.VISIBLE );
+                                    DatabaseReference myRef = FirebaseDatabase.getInstance().getReference ( );
+                                    RoomModel roomModel=new RoomModel ( binding.ticketPriceEdittext.getText ().toString (),
+                                            binding.firstLinePriceEdittext.getText ().toString (),
+                                            binding.middleLinePriceEdittext.getText ().toString (),
+                                            binding.lastLinePriceEdittext.getText ().toString (),
+                                            binding.firstLastPriceEdittext.getText ().toString (),
+                                            binding.fullHouseLinePriceEdittext.getText ().toString (),roomCode );
+
+                                    myRef.child ( "Room" ).child(roomCode).child("prices").setValue(roomModel).addOnCompleteListener ( task2 -> {
+                                        if(task2.isSuccessful ())
+                                        {
+                                            Toast.makeText ( HostScreen.this , "Update Success" , Toast.LENGTH_SHORT ).show ( );
+                                            Intent intent=new Intent (HostScreen.this,GameStartHostScreen.class  );
+                                            intent.putExtra ( "ROOM_ID",roomCode );
+                                            startActivity ( intent);
+                                            HostScreen.this.finish ();
+                                        }
+                                        else
+                                        {
+                                            Toast.makeText ( HostScreen.this , "Some Problem Occur" , Toast.LENGTH_SHORT ).show ( );
+                                        }
+                                        binding.progressBar.setVisibility ( View.INVISIBLE );
+                                    } );
+
+                                }else
+                                {
+                                    Toast.makeText ( HostScreen.this , "some problem occur" , Toast.LENGTH_SHORT ).show ( );
+                                }
+                            } );
 
 
-                    }else
-                    {
-                        Toast.makeText ( HostScreen.this , "some problem occur" , Toast.LENGTH_SHORT ).show ( );
-                    }
+                        }else
+                        {
+                            Toast.makeText ( HostScreen.this , "some problem occur" , Toast.LENGTH_SHORT ).show ( );
+                        }
 
-                } ) );
+                    } );
+                }
+            }
+        } );
 
 
     }
