@@ -7,25 +7,35 @@
         <entry key="..\:/Users/DELL/Desktop/indicorp/Tambola/app/src/main/res/drawable-v24/rectangle_background_green.xml" value="0.2212962962962963" />
         <entry key="..\:/Users/DELL/Desktop/indicorp/Tambola/app/src/main/res/drawable/circle_shape.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/DELL/Desktop/indicorp/Tambola/app/src/main/res/drawable/circular_corner_button_background.xml" value="0.20555555555555555" />
+        <entry key="..\:/Users/DELL/Desktop/indicorp/Tambola/app/src/main/res/drawable/circular_corner_enter_name_background.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/DELL/Desktop/indicorp/Tambola/app/src/main/res/drawable/ic__home_24.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/DELL/Desktop/indicorp/Tambola/app/src/main/res/drawable/ic_arrow_up.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/DELL/Desktop/indicorp/Tambola/app/src/main/res/drawable/ic_down_arrow.xml" value="0.2212962962962963" />
+        <entry key="..\:/Users/DELL/Desktop/indicorp/Tambola/app/src/main/res/drawable/ic_profile.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/DELL/Desktop/indicorp/Tambola/app/src/main/res/drawable/rectangle_background.xml" value="0.2212962962962963" />
         <entry key="..\:/Users/DELL/Desktop/indicorp/Tambola/app/src/main/res/drawable/rectangle_background_green.xml" value="0.2212962962962963" />
+        <entry key="..\:/Users/DELL/Desktop/indicorp/Tambola/app/src/main/res/drawable/round_button.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/DELL/Desktop/indicorp/Tambola/app/src/main/res/layout/activity_after_host_screen.xml" value="0.264" />
         <entry key="..\:/Users/DELL/Desktop/indicorp/Tambola/app/src/main/res/layout/activity_game_start_host_screen.xml" value="0.25" />
         <entry key="..\:/Users/DELL/Desktop/indicorp/Tambola/app/src/main/res/layout/activity_game_start_player_screen.xml" value="0.25" />
-        <entry key="..\:/Users/DELL/Desktop/indicorp/Tambola/app/src/main/res/layout/activity_host_screen.xml" value="0.23707664884135474" />
+        <entry key="..\:/Users/DELL/Desktop/indicorp/Tambola/app/src/main/res/layout/activity_host_screen.xml" value="0.264" />
+        <entry key="..\:/Users/DELL/Desktop/indicorp/Tambola/app/src/main/res/layout/activity_host_screen_old.xml" value="0.25" />
         <entry key="..\:/Users/DELL/Desktop/indicorp/Tambola/app/src/main/res/layout/activity_main.xml" value="0.22037037037037038" />
         <entry key="..\:/Users/DELL/Desktop/indicorp/Tambola/app/src/main/res/layout/activity_play_room.xml" value="0.2074074074074074" />
+        <entry key="..\:/Users/DELL/Desktop/indicorp/Tambola/app/src/main/res/layout/activity_splash.xml" value="0.25" />
         <entry key="..\:/Users/DELL/Desktop/indicorp/Tambola/app/src/main/res/layout/activity_winner_board.xml" value="0.264" />
+        <entry key="..\:/Users/DELL/Desktop/indicorp/Tambola/app/src/main/res/layout/custom_raw_event.xml" value="0.25" />
         <entry key="..\:/Users/DELL/Desktop/indicorp/Tambola/app/src/main/res/layout/custom_raw_for_board.xml" value="0.4" />
         <entry key="..\:/Users/DELL/Desktop/indicorp/Tambola/app/src/main/res/layout/custom_raw_for_done_numbers_list.xml" value="0.25" />
         <entry key="..\:/Users/DELL/Desktop/indicorp/Tambola/app/src/main/res/layout/custom_raw_for_players_ticket.xml" value="0.24615384615384617" />
         <entry key="..\:/Users/DELL/Desktop/indicorp/Tambola/app/src/main/res/layout/custom_raw_joined_players.xml" value="0.2" />
         <entry key="..\:/Users/DELL/Desktop/indicorp/Tambola/app/src/main/res/layout/custom_raw_winner_list.xml" value="0.25" />
+        <entry key="..\:/Users/DELL/Desktop/indicorp/Tambola/app/src/main/res/layout/enter_name_layout.xml" value="0.264" />
         <entry key="..\:/Users/DELL/Desktop/indicorp/Tambola/app/src/main/res/layout/layout_for_joined_players.xml" value="0.25" />
         <entry key="..\:/Users/DELL/Desktop/indicorp/Tambola/app/src/main/res/layout/layout_host_claims.xml" value="0.25" />
+        <entry key="..\:/Users/DELL/Desktop/indicorp/Tambola/app/src/main/res/layout/select_event_dialog.xml" value="0.176" />
         <entry key="..\:/Users/DELL/Desktop/indicorp/Tambola/app/src/main/res/layout/waiting_layout.xml" value="0.25" />
+        <entry key="..\:/Users/DELL/Desktop/indicorp/Tambola/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.26614583333333336" />
       </map>
     </option>
   </component>

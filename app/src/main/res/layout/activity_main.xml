@@ -4,20 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
-
     <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/name"
-        android:textColor="@color/black"
-        android:textSize="35sp"
-        android:textStyle="bold"
-        android:layout_marginStart="@dimen/margin_start"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/indicorp_logo"
+        android:alpha="0.1"
+        />
+
 
     <TextView
         android:id="@+id/player_name"
@@ -25,16 +21,20 @@
         android:layout_height="wrap_content"
         android:text="@string/ajay"
         android:textSize="35sp"
-        android:layout_marginStart="@dimen/margin_start"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/textView11"
+        android:textColor="@color/blue"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:drawableEndCompat="@drawable/ic_profile"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 
     <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/animationView"
-        android:layout_width="200dp"
+        android:id="@+id/host_animation_view"
+        android:layout_width="match_parent"
         android:layout_height="80dp"
+        android:layout_marginEnd="@dimen/margin_end"
+        android:layout_marginStart="@dimen/margin_start"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -43,49 +43,46 @@
         app:layout_constraintVertical_bias="0.136"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        app:lottie_url="https://assets7.lottiefiles.com/packages/lf20_u83tu7hs.json" />
+        app:lottie_rawRes="@raw/yellow_button_animation" />
 
     <TextView
         android:id="@+id/hostButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/host"
-        android:textColor="@color/black"
+        android:textColor="@color/indicorp_light_blue"
         android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="@+id/animationView"
-        app:layout_constraintEnd_toEndOf="@+id/animationView"
-        app:layout_constraintStart_toStartOf="@+id/animationView"
-        app:layout_constraintTop_toTopOf="@+id/animationView" />
-
+        app:layout_constraintBottom_toBottomOf="@+id/host_animation_view"
+        app:layout_constraintEnd_toEndOf="@+id/host_animation_view"
+        app:layout_constraintStart_toStartOf="@+id/host_animation_view"
+        app:layout_constraintTop_toTopOf="@+id/host_animation_view" />
 
 
     <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/animationView2"
-        android:layout_width="200dp"
+        android:id="@+id/play_animation_view"
+        android:layout_width="match_parent"
         android:layout_height="80dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="@dimen/margin_start"
+        android:layout_marginEnd="@dimen/margin_end"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/animationView"
-        app:layout_constraintVertical_bias="0.1"
+        app:layout_constraintTop_toBottomOf="@+id/host_animation_view"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        app:lottie_url="https://assets7.lottiefiles.com/packages/lf20_u83tu7hs.json" />
-
-
+        app:lottie_rawRes="@raw/yellow_button_animation" />
 
     <TextView
         android:id="@+id/playButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/play"
-        android:textColor="@color/black"
+        android:textColor="@color/indicorp_light_blue"
         android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="@+id/animationView2"
-        app:layout_constraintEnd_toEndOf="@+id/animationView2"
-        app:layout_constraintStart_toStartOf="@+id/animationView2"
-        app:layout_constraintTop_toTopOf="@+id/animationView2" />
+        app:layout_constraintBottom_toBottomOf="@+id/play_animation_view"
+        app:layout_constraintEnd_toEndOf="@+id/play_animation_view"
+        app:layout_constraintStart_toStartOf="@+id/play_animation_view"
+        app:layout_constraintTop_toTopOf="@+id/play_animation_view" />
 
 
     <ProgressBar
@@ -97,5 +94,45 @@
         android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/develop_by_indicorp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/developed_by_indicorpit"
+        android:textColor="@color/indicorp_dark_blue"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/adView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/play_animation_view"
+        app:layout_constraintVertical_bias="0.754" />
+
+    <TextView
+        android:id="@+id/contact_us_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/contact_us"
+        android:textColor="@color/indicorp_light_blue"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/develop_by_indicorp"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/develop_by_indicorp"
+        app:layout_constraintTop_toBottomOf="@+id/develop_by_indicorp" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:adSize="BANNER"
+        app:adUnitId="@string/banner_id"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

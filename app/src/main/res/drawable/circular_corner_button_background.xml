@@ -3,9 +3,11 @@
     <corners
         android:radius="14dp"
         />
-    <solid android:color="@color/light_green"/>
+    <solid android:color="@color/yellow"/>
+
     <stroke
         android:width="3dp"
-        android:color="#878787"
+        android:color="@color/indicorp_light_blue"
         />
+
 </shape>
