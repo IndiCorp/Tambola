@@ -295,6 +295,7 @@ public class GameStartHostScreen extends AppCompatActivity {
                     {
                         Toast.makeText ( GameStartHostScreen.this , "problem occurred" , Toast.LENGTH_SHORT ).show ( );
                         GameStartHostScreen.this.finish ();
+
                     }
                 }
 
