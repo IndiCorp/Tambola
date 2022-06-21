@@ -25,6 +25,7 @@ public class Database {
         if (single_instance == null)
             single_instance = new Database();
 
+
         return single_instance.myRef;
     }
 }
