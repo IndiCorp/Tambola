@@ -35,6 +35,7 @@ public class WinnerBoardActivity extends AppCompatActivity {
     WinnerActivityRoomModel winnerActivityRoomModel;
     ChildEventListener childEventListener;
     RoomModel pricesRoomModel;
+
     @Override
     protected void onCreate ( Bundle savedInstanceState ) {
         super.onCreate ( savedInstanceState );
