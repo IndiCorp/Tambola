@@ -42,7 +42,6 @@ public class WinnerBoardActivity extends AppCompatActivity {
         setContentView ( binding.getRoot () );
         winnerActivityRoomModel=new ViewModelProvider (this).get( WinnerActivityRoomModel.class);
         mp= MediaPlayer.create(this, R.raw.firework_sound);
-
         AdView mAdView = binding.adView;
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
