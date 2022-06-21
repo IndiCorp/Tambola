@@ -11,21 +11,31 @@
   <TextView
       android:layout_width="match_parent"
       android:layout_height="match_parent"
-      android:background="@drawable/indicorp_logo"
       android:alpha="0.1"
-      />
+      android:background="@drawable/indicorp_logo" />
 
   <androidx.core.widget.NestedScrollView
+      android:id="@+id/nested_scroll_view"
       android:layout_width="match_parent"
       android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingBottom="56dp"
         tools:context=".HostScreen">
+
+      <ImageView
+          android:id="@+id/speaker_icon"
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:src="@drawable/ic_speaker_icon"
+          app:layout_constraintStart_toStartOf="@+id/ticket_price_textView"
+          app:layout_constraintTop_toTopOf="@+id/textView6" />
 
 
       <TextView
+          android:id="@+id/textView6"
           android:layout_width="450dp"
           android:layout_height="100dp"
           android:background="@drawable/ribbon_design"
@@ -137,7 +147,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_marginTop="10dp"
-          android:text="@string/price_distribution"
+          android:text="@string/prize_distribution"
           android:textColor="@color/black"
           android:textSize="25sp"
           android:textStyle="bold"
@@ -173,6 +183,7 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:layout_marginStart="@dimen/margin_start"
+          android:layout_marginTop="10dp"
           android:layout_marginEnd="@dimen/margin_end"
           app:layout_constraintStart_toStartOf="parent"
           app:layout_constraintTop_toBottomOf="@id/price_distribution_textView">
@@ -190,21 +201,77 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/first_line_price_value_edittext" />
 
+
+        <ImageView
+            android:id="@+id/first_line_info"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/ic_info"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/first_line_price_value_edittext"
+            app:layout_constraintHorizontal_bias="0.12"
+            app:layout_constraintStart_toEndOf="@+id/first_line_textView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/first_line_plusButtonCardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.97"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+          <TextView
+              android:id="@+id/first_line_plusButton"
+              android:layout_width="30dp"
+              android:layout_height="30dp"
+              android:background="@color/theme_base_green_color"
+              android:gravity="center"
+              android:text="@string/plus_symbol"
+              android:textColor="@color/white"
+              android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
         <EditText
             android:id="@+id/first_line_price_value_edittext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
             android:gravity="center"
             android:inputType="number"
             android:text="@string/_00"
             android:textColor="@color/black"
             android:textSize="18sp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/first_line_plusButtonCardView"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.96"
-            app:layout_constraintStart_toEndOf="@+id/first_line_textView"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/first_line_subtractButton_CardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/first_line_price_value_edittext"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/first_line_info"
+            app:layout_constraintTop_toTopOf="parent">
+
+          <TextView
+              android:id="@+id/first_line_subtractButton"
+              android:layout_width="30dp"
+              android:layout_height="30dp"
+              android:background="@color/light_green_color"
+              android:gravity="center"
+              android:text="@string/subtract_symbol"
+              android:textColor="@color/white"
+              android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
 
       </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -230,21 +297,80 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/middle_line_price_value_edittext" />
 
+
+        <ImageView
+            android:id="@+id/middle_line_info"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/ic_info"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/middle_line_price_value_edittext"
+            app:layout_constraintHorizontal_bias="0.12"
+            app:layout_constraintStart_toEndOf="@+id/middle_line_textView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/middle_line_plusButtonCardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.97"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+          <TextView
+              android:id="@+id/middle_line_plusButton"
+              android:layout_width="30dp"
+              android:layout_height="30dp"
+              android:background="@color/theme_base_green_color"
+              android:gravity="center"
+              android:text="@string/plus_symbol"
+              android:textColor="@color/white"
+              android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
         <EditText
             android:id="@+id/middle_line_price_value_edittext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
             android:gravity="center"
             android:inputType="number"
             android:text="@string/_00"
             android:textColor="@color/black"
             android:textSize="18sp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/middle_line_plusButtonCardView"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.96"
-            app:layout_constraintStart_toEndOf="@+id/middle_line_textView"
             app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/middle_line_subtractButton_CardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/middle_line_price_value_edittext"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/middle_line_info"
+            app:layout_constraintTop_toTopOf="parent">
+
+          <TextView
+              android:id="@+id/middle_line_subtractButton"
+              android:layout_width="30dp"
+              android:layout_height="30dp"
+              android:background="@color/light_green_color"
+              android:gravity="center"
+              android:text="@string/subtract_symbol"
+              android:textColor="@color/white"
+              android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
+
       </androidx.constraintlayout.widget.ConstraintLayout>
 
       <androidx.constraintlayout.widget.ConstraintLayout
@@ -269,21 +395,79 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/last_line_price_value_edittext" />
 
+
+        <ImageView
+            android:id="@+id/last_line_info"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/ic_info"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/last_line_price_value_edittext"
+            app:layout_constraintHorizontal_bias="0.12"
+            app:layout_constraintStart_toEndOf="@+id/last_line_textView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/last_line_plusButtonCardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.97"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+          <TextView
+              android:id="@+id/last_line_plusButton"
+              android:layout_width="30dp"
+              android:layout_height="30dp"
+              android:background="@color/theme_base_green_color"
+              android:gravity="center"
+              android:text="@string/plus_symbol"
+              android:textColor="@color/white"
+              android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
         <EditText
             android:id="@+id/last_line_price_value_edittext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
             android:gravity="center"
             android:inputType="number"
             android:text="@string/_00"
             android:textColor="@color/black"
             android:textSize="18sp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/last_line_plusButtonCardView"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.96"
-            app:layout_constraintStart_toEndOf="@+id/last_line_textView"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/last_line_subtractButton_CardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/last_line_price_value_edittext"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/last_line_info"
+            app:layout_constraintTop_toTopOf="parent">
+
+          <TextView
+              android:id="@+id/last_line_subtractButton"
+              android:layout_width="30dp"
+              android:layout_height="30dp"
+              android:background="@color/light_green_color"
+              android:gravity="center"
+              android:text="@string/subtract_symbol"
+              android:textColor="@color/white"
+              android:textSize="20sp" />
+
+        </androidx.cardview.widget.CardView>
+
+
       </androidx.constraintlayout.widget.ConstraintLayout>
 
       <androidx.constraintlayout.widget.ConstraintLayout
@@ -308,21 +492,78 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/early_five_price_value_edittext" />
 
+        <ImageView
+            android:id="@+id/early_five_info"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/ic_info"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/early_five_price_value_edittext"
+            app:layout_constraintHorizontal_bias="0.12"
+            app:layout_constraintStart_toEndOf="@+id/early_five_textView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/early_five_plusButtonCardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.97"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+          <TextView
+              android:id="@+id/early_five_plusButton"
+              android:layout_width="30dp"
+              android:layout_height="30dp"
+              android:background="@color/theme_base_green_color"
+              android:gravity="center"
+              android:text="@string/plus_symbol"
+              android:textColor="@color/white"
+              android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
         <EditText
             android:id="@+id/early_five_price_value_edittext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
             android:gravity="center"
             android:inputType="number"
             android:text="@string/_00"
             android:textColor="@color/black"
             android:textSize="18sp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/early_five_plusButtonCardView"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.96"
-            app:layout_constraintStart_toEndOf="@+id/early_five_textView"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/early_five_subtractButton_CardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/early_five_price_value_edittext"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/early_five_info"
+            app:layout_constraintTop_toTopOf="parent">
+
+          <TextView
+              android:id="@+id/early_five_subtractButton"
+              android:layout_width="30dp"
+              android:layout_height="30dp"
+              android:background="@color/light_green_color"
+              android:gravity="center"
+              android:text="@string/subtract_symbol"
+              android:textColor="@color/white"
+              android:textSize="20sp" />
+
+        </androidx.cardview.widget.CardView>
+
       </androidx.constraintlayout.widget.ConstraintLayout>
 
       <androidx.constraintlayout.widget.ConstraintLayout
@@ -348,20 +589,82 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/ladoo_price_value_edittext" />
 
+
+        <ImageView
+            android:id="@+id/ladoo_info"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/ic_info"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ladoo_price_value_edittext"
+            app:layout_constraintHorizontal_bias="0.12"
+            app:layout_constraintStart_toEndOf="@+id/ladoo_textView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/ladoo_plusButtonCardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.97"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+          <TextView
+              android:id="@+id/ladoo_plusButton"
+              android:layout_width="30dp"
+              android:layout_height="30dp"
+              android:background="@color/theme_base_green_color"
+              android:gravity="center"
+              android:text="@string/plus_symbol"
+              android:textColor="@color/white"
+              android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
         <EditText
             android:id="@+id/ladoo_price_value_edittext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
             android:gravity="center"
             android:inputType="number"
             android:text="@string/_00"
+            android:textColor="@color/black"
             android:textSize="18sp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/ladoo_plusButtonCardView"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.96"
-            app:layout_constraintStart_toEndOf="@+id/ladoo_textView"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/ladoo_subtractButton_CardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ladoo_price_value_edittext"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/ladoo_info"
+            app:layout_constraintTop_toTopOf="parent">
+
+          <TextView
+              android:id="@+id/ladoo_subtractButton"
+              android:layout_width="30dp"
+              android:layout_height="30dp"
+              android:background="@color/light_green_color"
+              android:gravity="center"
+              android:text="@string/subtract_symbol"
+              android:textColor="@color/white"
+              android:textSize="20sp" />
+
+        </androidx.cardview.widget.CardView>
+
+
+
       </androidx.constraintlayout.widget.ConstraintLayout>
 
       <androidx.constraintlayout.widget.ConstraintLayout
@@ -387,20 +690,77 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/king_corners_price_value_edittext" />
 
+        <ImageView
+            android:id="@+id/king_corners_info"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/ic_info"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/king_corners_price_value_edittext"
+            app:layout_constraintHorizontal_bias="0.12"
+            app:layout_constraintStart_toEndOf="@+id/king_corners_textView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/king_corners_plusButtonCardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.97"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+          <TextView
+              android:id="@+id/king_corners_plusButton"
+              android:layout_width="30dp"
+              android:layout_height="30dp"
+              android:background="@color/theme_base_green_color"
+              android:gravity="center"
+              android:text="@string/plus_symbol"
+              android:textColor="@color/white"
+              android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
         <EditText
             android:id="@+id/king_corners_price_value_edittext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
             android:gravity="center"
             android:inputType="number"
             android:text="@string/_00"
+            android:textColor="@color/black"
             android:textSize="18sp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/king_corners_plusButtonCardView"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.96"
-            app:layout_constraintStart_toEndOf="@+id/king_corners_textView"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/king_corners_CardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/king_corners_price_value_edittext"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/king_corners_info"
+            app:layout_constraintTop_toTopOf="parent">
+
+          <TextView
+              android:id="@+id/king_corners_subtractButton"
+              android:layout_width="30dp"
+              android:layout_height="30dp"
+              android:background="@color/light_green_color"
+              android:gravity="center"
+              android:text="@string/subtract_symbol"
+              android:textColor="@color/white"
+              android:textSize="20sp" />
+
+        </androidx.cardview.widget.CardView>
+
       </androidx.constraintlayout.widget.ConstraintLayout>
 
       <androidx.constraintlayout.widget.ConstraintLayout
@@ -426,20 +786,78 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/queen_corners_price_value_edittext" />
 
+
+        <ImageView
+            android:id="@+id/queen_corners_info"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/ic_info"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/queen_corners_price_value_edittext"
+            app:layout_constraintHorizontal_bias="0.12"
+            app:layout_constraintStart_toEndOf="@+id/queen_corners_textView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/queen_corners_plusButtonCardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.97"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+          <TextView
+              android:id="@+id/queen_corners_plusButton"
+              android:layout_width="30dp"
+              android:layout_height="30dp"
+              android:background="@color/theme_base_green_color"
+              android:gravity="center"
+              android:text="@string/plus_symbol"
+              android:textColor="@color/white"
+              android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
         <EditText
             android:id="@+id/queen_corners_price_value_edittext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
             android:gravity="center"
             android:inputType="number"
             android:text="@string/_00"
+            android:textColor="@color/black"
             android:textSize="18sp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/queen_corners_plusButtonCardView"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.96"
-            app:layout_constraintStart_toEndOf="@+id/queen_corners_textView"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/queen_corners_CardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/queen_corners_price_value_edittext"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/queen_corners_info"
+            app:layout_constraintTop_toTopOf="parent">
+
+          <TextView
+              android:id="@+id/queen_corners_subtractButton"
+              android:layout_width="30dp"
+              android:layout_height="30dp"
+              android:background="@color/light_green_color"
+              android:gravity="center"
+              android:text="@string/subtract_symbol"
+              android:textColor="@color/white"
+              android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
+
       </androidx.constraintlayout.widget.ConstraintLayout>
 
       <androidx.constraintlayout.widget.ConstraintLayout
@@ -465,20 +883,78 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/bamboo_price_value_edittext" />
 
+
+        <ImageView
+            android:id="@+id/bamboo_info"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/ic_info"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/bamboo_price_value_edittext"
+            app:layout_constraintHorizontal_bias="0.12"
+            app:layout_constraintStart_toEndOf="@+id/bamboo_textView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/bamboo_plusButtonCardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.97"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+          <TextView
+              android:id="@+id/bamboo_plusButton"
+              android:layout_width="30dp"
+              android:layout_height="30dp"
+              android:background="@color/theme_base_green_color"
+              android:gravity="center"
+              android:text="@string/plus_symbol"
+              android:textColor="@color/white"
+              android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
         <EditText
             android:id="@+id/bamboo_price_value_edittext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
             android:gravity="center"
             android:inputType="number"
             android:text="@string/_00"
+            android:textColor="@color/black"
             android:textSize="18sp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/bamboo_plusButtonCardView"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.96"
-            app:layout_constraintStart_toEndOf="@+id/bamboo_textView"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/bamboo_CardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/bamboo_price_value_edittext"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/bamboo_info"
+            app:layout_constraintTop_toTopOf="parent">
+
+          <TextView
+              android:id="@+id/bamboo_subtractButton"
+              android:layout_width="30dp"
+              android:layout_height="30dp"
+              android:background="@color/light_green_color"
+              android:gravity="center"
+              android:text="@string/subtract_symbol"
+              android:textColor="@color/white"
+              android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
       </androidx.constraintlayout.widget.ConstraintLayout>
 
       <androidx.constraintlayout.widget.ConstraintLayout
@@ -503,21 +979,76 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/full_house_value_edittext" />
 
+        <ImageView
+            android:id="@+id/full_house_info"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/ic_info"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/full_house_value_edittext"
+            app:layout_constraintHorizontal_bias="0.12"
+            app:layout_constraintStart_toEndOf="@+id/full_house_textView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/full_house_plusButtonCardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.97"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+          <TextView
+              android:id="@+id/full_house_plusButton"
+              android:layout_width="30dp"
+              android:layout_height="30dp"
+              android:background="@color/theme_base_green_color"
+              android:gravity="center"
+              android:text="@string/plus_symbol"
+              android:textColor="@color/white"
+              android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
         <EditText
             android:id="@+id/full_house_value_edittext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
             android:gravity="center"
             android:inputType="number"
             android:text="@string/_00"
             android:textColor="@color/black"
             android:textSize="18sp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/full_house_plusButtonCardView"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.96"
-            app:layout_constraintStart_toEndOf="@+id/full_house_textView"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/full_house_CardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/full_house_value_edittext"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/full_house_info"
+            app:layout_constraintTop_toTopOf="parent">
+
+          <TextView
+              android:id="@+id/full_house_subtractButton"
+              android:layout_width="30dp"
+              android:layout_height="30dp"
+              android:background="@color/light_green_color"
+              android:gravity="center"
+              android:text="@string/subtract_symbol"
+              android:textColor="@color/white"
+              android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
       </androidx.constraintlayout.widget.ConstraintLayout>
 
       <androidx.constraintlayout.widget.ConstraintLayout
@@ -543,20 +1074,76 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/second_house_value_edittext" />
 
+        <ImageView
+            android:id="@+id/second_house_info"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/ic_info"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/second_house_value_edittext"
+            app:layout_constraintHorizontal_bias="0.12"
+            app:layout_constraintStart_toEndOf="@+id/second_house_textView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/second_house_plusButtonCardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.97"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+          <TextView
+              android:id="@+id/second_house_plusButton"
+              android:layout_width="30dp"
+              android:layout_height="30dp"
+              android:background="@color/theme_base_green_color"
+              android:gravity="center"
+              android:text="@string/plus_symbol"
+              android:textColor="@color/white"
+              android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
         <EditText
             android:id="@+id/second_house_value_edittext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
             android:gravity="center"
             android:inputType="number"
             android:text="@string/_00"
+            android:textColor="@color/black"
             android:textSize="18sp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/second_house_plusButtonCardView"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.96"
-            app:layout_constraintStart_toEndOf="@+id/second_house_textView"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/second_house_CardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/second_house_value_edittext"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/second_house_info"
+            app:layout_constraintTop_toTopOf="parent">
+
+          <TextView
+              android:id="@+id/second_house_subtractButton"
+              android:layout_width="30dp"
+              android:layout_height="30dp"
+              android:background="@color/light_green_color"
+              android:gravity="center"
+              android:text="@string/subtract_symbol"
+              android:textColor="@color/white"
+              android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
       </androidx.constraintlayout.widget.ConstraintLayout>
 
       <androidx.constraintlayout.widget.ConstraintLayout
@@ -708,8 +1295,6 @@
           app:layout_constraintTop_toBottomOf="@+id/sold_tickets_recycleView" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
   </androidx.core.widget.NestedScrollView>
 
   <com.google.android.gms.ads.AdView
@@ -722,5 +1307,6 @@
       ads:adSize="BANNER"
       ads:adUnitId="@string/banner_id">
   </com.google.android.gms.ads.AdView>
+
 
 </RelativeLayout>

@@ -5,7 +5,7 @@
     <string name="num_players_textView">No. of Players</string>
     <string name="_00">00</string>
     <string name="total_price_money">Price Money</string>
-    <string name="price_distribution">Price Distribution</string>
+    <string name="prize_distribution">Prize Distribution</string>
     <string name="first_line">First Line</string>
     <string name="last_line">Last Line</string>
     <string name="middle_line">Middle Line</string>
@@ -71,4 +71,8 @@
     <string name="home">Home</string>
     <string name="banner_id">ca-app-pub-3940256099942544/6300978111</string>
     <string name="total">Total</string>
+    <string name="_12">  </string>
+    <string name="share_room_data">Share Result</string>
+    <string name="subtract_symbol">-</string>
+
 </resources>

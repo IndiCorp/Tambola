@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.indicorp.tambola">
+    package="com.indicorpit.tambola">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
 
     <application
@@ -15,7 +16,7 @@
         android:screenOrientation="sensorPortrait"
         android:theme="@style/Theme.Tambola">
         <activity
-            android:name="com.indicorp.tambola.SplashActivity"
+            android:name="com.indicorpit.tambola.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,22 +25,22 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.indicorp.tambola.WinnerBoardActivity"
+            android:name="com.indicorpit.tambola.WinnerBoardActivity"
             android:exported="false" />
         <activity
-            android:name="com.indicorp.tambola.GameStartPlayerScreen"
+            android:name="com.indicorpit.tambola.GameStartPlayerScreen"
             android:exported="false" />
         <activity
-            android:name="com.indicorp.tambola.GameStartHostScreen"
+            android:name="com.indicorpit.tambola.GameStartHostScreen"
             android:exported="false" />
         <activity
-            android:name="com.indicorp.tambola.PlayRoom"
+            android:name="com.indicorpit.tambola.PlayRoom"
             android:exported="false" />
         <activity
-            android:name="com.indicorp.tambola.HostScreen"
+            android:name="com.indicorpit.tambola.HostScreen"
             android:exported="false" />
         <activity
-            android:name="com.indicorp.tambola.MainActivity"
+            android:name="com.indicorpit.tambola.MainActivity"
             android:exported="false"/>
 
         <!-- Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713 -->

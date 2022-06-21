@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_start"
         android:text="@string/ajay"
-        android:textColor="@color/light_green"
+        android:textColor="@color/indicorp_dark_blue"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/claim_type" />
